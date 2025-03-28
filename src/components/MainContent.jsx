@@ -70,24 +70,71 @@ const MainContent = () => {
                     <Typography variant="h3" component="h2" align="center" gutterBottom sx={{ fontWeight: 700 }}>
                         Our Services
                     </Typography>
-                    <Grid container spacing={4} sx={{ px: 2 }}>
+                    <Grid
+                        container
+                        spacing={3}
+                        sx={{
+                            justifyContent: "center",
+                            px: 2,
+                            "& .MuiGrid-item": {
+                                display: "flex",
+                                justifyContent: "center",
+                                maxWidth: { xs: '50%', sm: '33%', md: '25%' }, // Responsive max-width
+                                flexBasis: { xs: '50%', sm: '33%', md: '25%' },
+                            }
+                        }}
+                    >
                         {services.map((service, index) => (
-                            <Grid item xs={12} sm={6} md={3} key={index}>
+                            <Grid
+                                item
+                                key={index}
+                                xs={6}  // 2 cards per row on mobile
+                                sm={4}  // 3 cards per row on small tablets
+                                md={3}  // 4 cards per row on desktop
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    p: 1.5 // Adjust padding for better spacing
+                                }}
+                            >
                                 <Card sx={{
+                                    width: '100%',
                                     height: '100%',
                                     display: 'flex',
                                     flexDirection: 'column',
                                     transition: 'transform 0.3s',
-                                    '&:hover': { transform: 'translateY(-5px)' }
+                                    '&:hover': {
+                                        transform: 'translateY(-5px)',
+                                        boxShadow: 3
+                                    }
                                 }}>
-                                    <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
-                                        <Box sx={{ color: 'primary.main', mb: 2 }}>
+                                    <CardContent sx={{
+                                        flexGrow: 1,
+                                        textAlign: 'center',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        px: 2,
+                                        py: 3
+                                    }}>
+                                        <Box sx={{
+                                            color: 'primary.main',
+                                            mb: 2,
+                                            fontSize: { xs: '2rem', md: '2.5rem' }
+                                        }}>
                                             {service.icon}
                                         </Box>
                                         <Typography variant="h5" gutterBottom>
                                             {service.title}
                                         </Typography>
-                                        <Typography variant="body1" color="text.secondary">
+                                        <Typography
+                                            variant="body1"
+                                            color="text.secondary"
+                                            sx={{
+                                                flexGrow: 1,
+                                                fontSize: { xs: '0.875rem', sm: '1rem' } // Responsive text
+                                            }}
+                                        >
                                             {service.description}
                                         </Typography>
                                     </CardContent>
