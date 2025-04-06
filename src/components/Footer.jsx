@@ -35,6 +35,10 @@ const Footer = () => {
                                 <Phone sx={{ mr: 1 }} />
                                 <Typography>+91 931-931-9994</Typography>
                             </Box>
+                            <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                                <Phone sx={{ mr: 1 }} />
+                                <Typography>+91 931-931-9998</Typography>
+                            </Box>
                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                 <Email sx={{ mr: 1 }} />
                                 <Typography>centerofdiagnostic01@gmail.com</Typography>

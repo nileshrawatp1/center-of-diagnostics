@@ -72,26 +72,71 @@ const Navbar = () => {
         <>
             <AppBar position="sticky" sx={{ bgcolor: 'background.default', color: 'text.primary', boxShadow: 1 }}>
                 <Container maxWidth="xl">
-                    <Toolbar>
+                    <Toolbar disableGutters sx={{ display:'flex', alignItems:'center' }}>
                         <Box
                             component="img"
-                            src="/images/logo.png"
+                            src="/images/logo_only.svg"
                             sx={{
-                                height: 70,
-                                width: 200,
-                                padding: 0.5,
-                                filter: 'brightness(0) saturate(100%) drop-shadow(1px 1px 1px rgba(0,0,0,0.2)) drop-shadow(2px 2px 2px rgba(0,0,0,0.15))',
+                                height: 80,
+                                width: 100,
+                                p: 0.5,
+                                filter: `
+                                       invert(16%)
+                                       sepia(90%)
+                                       saturate(7404%)
+                                       hue-rotate(1deg)
+                                       brightness(69%)
+                                       contrast(218%)
+                                       drop-shadow(1px 1px 1px rgba(0,0,0,0.2))
+                                       drop-shadow(2px 2px 2px rgba(0,0,0,0.15))
+                                     `.replace(/\s+/g, ' ').trim(),
                                 transition: 'all 0.3s ease-in-out',
                                 display: 'block',
                                 mx: 'auto',
                                 '&:hover': {
                                     transform: 'scale(1.05)',
-                                    filter: 'brightness(0) saturate(100%) drop-shadow(2px 2px 2px rgba(0,0,0,0.3)) drop-shadow(4px 4px 4px rgba(0,0,0,0.2))',
+                                    filter: `
+                                        invert(8%) sepia(100%) saturate(7471%) hue-rotate(0deg) brightness(95%) contrast(112%)
+                                        drop-shadow(2px 2px 2px rgba(0,0,0,0.3))
+                                        drop-shadow(4px 4px 4px rgba(0,0,0,0.2))
+                                      `.replace(/\s+/g, ' ').trim()
+                                }
+                            }}
+
+                            alt="logo"
+                        />
+                        <Box
+                            component="img"
+                            src="/images/logo_text.svg"
+                            sx={{
+                                height: 70,
+                                width: "100%",
+                                p: 0.5,
+                                filter: `
+                                       invert(16%)
+                                       sepia(90%)
+                                       saturate(7404%)
+                                       hue-rotate(1deg)
+                                       brightness(69%)
+                                       contrast(218%)
+                                       drop-shadow(1px 1px 1px rgba(0,0,0,0.2))
+                                       drop-shadow(2px 2px 2px rgba(0,0,0,0.15))
+                                     `.replace(/\s+/g, ' ').trim(),
+                                transition: 'all 0.3s ease-in-out',
+                                display: 'block',
+                                mx: 'auto',
+                                '&:hover': {
+                                    transform: 'scale(1.05)',
+                                    filter: `
+                                        invert(8%) sepia(100%) saturate(7471%) hue-rotate(0deg) brightness(95%) contrast(112%)
+                                        drop-shadow(2px 2px 2px rgba(0,0,0,0.3))
+                                        drop-shadow(4px 4px 4px rgba(0,0,0,0.2))
+                                      `.replace(/\s+/g, ' ').trim()
                                 }
                             }}
                             alt="logo"
                         />
-                        <Box sx={{ flexGrow: 1 }} />
+                        <Box sx={{ flexGrow: 1, }} />
                         {!isMobile && (
                             <Box sx={{ display: 'flex', gap: 3 }}>
                                 <Button component={Link} to="/" color="inherit">Home</Button>

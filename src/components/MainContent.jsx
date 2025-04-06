@@ -47,8 +47,8 @@ const MainContent = () => {
                             textAlign: 'center',
                             mx: 'auto'
                         }}>
-                            <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 700 }}>
-                                Advanced Diagnostic Care
+                            <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 700 }}>
+                                CENTER OF DIAGNOSTIC
                             </Typography>
                             <Typography variant="h5" gutterBottom sx={{ mb: 4 }}>
                                 Precision Diagnostics with Compassion
