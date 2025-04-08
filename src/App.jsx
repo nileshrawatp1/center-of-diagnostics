@@ -9,7 +9,7 @@ import {
 
 
 import Navbar from './components/Navbar';
-import MainContent from './components/MainContent';
+import Services from './components/Services';
 import Footer from './components/Footer';
 
 const theme = createTheme({
@@ -47,7 +47,7 @@ function App() {
                 <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 
                     <Navbar />
-                    <MainContent />
+                    <Services />
                     <Footer />
 
                 </Box>

@@ -72,7 +72,7 @@ const Navbar = () => {
         <>
             <AppBar position="sticky" sx={{ bgcolor: 'background.default', color: 'text.primary', boxShadow: 1 }}>
                 <Container maxWidth="xl">
-                    <Toolbar disableGutters sx={{ display:'flex', alignItems:'center' }}>
+                    <Toolbar disableGutters sx={{ display:'flex', alignItems:'center', justifyContent: 'space-between' }}>
                         <Box
                             component="img"
                             src="/images/logo_only.svg"
@@ -112,6 +112,7 @@ const Navbar = () => {
                                 height: 70,
                                 width: "100%",
                                 p: 0.5,
+                                // pl: 20,
                                 filter: `
                                        invert(16%)
                                        sepia(90%)

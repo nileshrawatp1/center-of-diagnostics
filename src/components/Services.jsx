@@ -17,15 +17,19 @@ import {
     Computer,
 } from '@mui/icons-material';
 import AboutSection from './AboutSection';
+import FlipRoundedIcon from '@mui/icons-material/FlipRounded';
 
 const services = [
     { title: 'Ultrasound', icon: <MedicalServices fontSize="large" />, description: 'High-resolution ultrasound imaging' },
     { title: 'CT Scan', icon: <Computer fontSize="large" />, description: 'Advanced CT scanning technology' },
     { title: 'Blood Testing', icon: <Bloodtype fontSize="large" />, description: 'Complete blood work analysis' },
     { title: 'Cardiology', icon: <MonitorHeart fontSize="large" />, description: 'Cardiac assessment & monitoring' },
+    { title: 'FIBRO SCAN', icon: <FlipRoundedIcon fontSize="large" />, description: 'ASSESSING LIVER HEALTH' },
+    { title: 'ECG', icon: <MonitorHeart fontSize="large" />, description: '12 CHANNEL ECG MONITORING' },
+    { title: 'INTERVENTION PROCEDURE', icon: <MonitorHeart fontSize="large" />, description: 'PIGTAIL, FNAC, VIOPSY, DRANAGE TUBES' },
 ];
 
-const MainContent = () => {
+const Services = () => {
     return (
         <>
             <Box component="main" sx={{ flexGrow: 1 }}>
@@ -152,4 +156,4 @@ const MainContent = () => {
     )
 }
 
-export default MainContent
+export default Services
