@@ -11,6 +11,7 @@ import {
 import Navbar from './components/Navbar';
 import Services from './components/Services';
 import Footer from './components/Footer';
+import PhoneDialer from './components/PhoneDialer';
 
 const theme = createTheme({
     components: {
@@ -46,6 +47,7 @@ function App() {
             <Router>
                 <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 
+                    {/* <PhoneDialer /> */}
                     <Navbar />
                     <Services />
                     <Footer />

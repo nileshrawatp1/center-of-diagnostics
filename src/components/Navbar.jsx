@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Phone } from '@mui/icons-material';
 
 import {
     AppBar,
@@ -60,6 +61,15 @@ const Navbar = () => {
                 <Close />
             </IconButton>
             <Grid container direction="column" spacing={2}>
+                <Button
+                    component="a"
+                    href="tel:9319319994"
+                    startIcon={<Phone fontSize="small" />}
+                    color="inherit"
+                    sx={{ justifyContent: 'flex-start' }}
+                >
+                    9319319994
+                </Button>
                 <Button component={Link} to="/" color="inherit">Home</Button>
                 <Button component={Link} to="/services" color="inherit">Services</Button>
                 <Button component={Link} to="/about" color="inherit">About</Button>
@@ -72,7 +82,7 @@ const Navbar = () => {
         <>
             <AppBar position="sticky" sx={{ bgcolor: 'background.default', color: 'text.primary', boxShadow: 1 }}>
                 <Container maxWidth="xl">
-                    <Toolbar disableGutters sx={{ display:'flex', alignItems:'center', justifyContent: 'space-between' }}>
+                    <Toolbar disableGutters sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <Box
                             component="img"
                             src="/images/logo_only.svg"
@@ -139,12 +149,33 @@ const Navbar = () => {
                         />
                         <Box sx={{ flexGrow: 1, }} />
                         {!isMobile && (
-                            <Box sx={{ display: 'flex', gap: 3 }}>
-                                <Button component={Link} to="/" color="inherit">Home</Button>
-                                <Button component={Link} to="/services" color="inherit">Services</Button>
-                                <Button component={Link} to="/about" color="inherit">About</Button>
-                                <Button component={Link} to="/contact" color="inherit">Contact</Button>
-                            </Box>
+                            <>
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, flexGrow: 1, justifyContent: 'flex-end' }}>
+                                    <Box sx={{ display: 'flex', gap: 3 }}>
+                                        <Button component={Link} to="/" color="inherit">Home</Button>
+                                        <Button component={Link} to="/services" color="inherit">Services</Button>
+                                        <Button component={Link} to="/about" color="inherit">About</Button>
+                                        <Button component={Link} to="/contact" color="inherit">Contact</Button>
+                                    </Box>
+                                    <Button
+                                        component="a"
+                                        href="tel:9319319994"
+                                        startIcon={<Phone fontSize="small" />}
+                                        sx={{
+                                            color: 'primary.main',
+                                            fontWeight: 'bold',
+                                            fontSize: '1rem',
+                                            ml: 1, // Add left margin
+                                            '&:hover': {
+                                                color: 'primary.dark',
+                                                backgroundColor: 'transparent'
+                                            }
+                                        }}
+                                    >
+                                        9319319994
+                                    </Button>
+                                </Box>
+                            </>
                         )}
                         {isMobile && (
                             <IconButton
