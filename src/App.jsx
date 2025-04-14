@@ -31,6 +31,7 @@ const theme = createTheme({
         },
         background: {
             default: '#ffffff',
+            blue: '#5edef0'
         },
     },
     typography: {

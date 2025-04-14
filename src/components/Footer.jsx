@@ -29,15 +29,56 @@ const Footer = () => {
                             <Typography variant="h6" gutterBottom>Contact Us</Typography>
                             <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                                 <LocationOn sx={{ mr: 1 }} />
-                                <Typography>123 Medical Street, Health City</Typography>
+                                <Typography
+                                    variant="body1"
+                                    sx={{
+                                        whiteSpace: 'pre-line', // Preserves line breaks
+                                        maxWidth: 400, // Optional: Set max width for better wrapping
+                                        textAlign: 'left' // Adjust alignment as needed
+                                    }}
+                                >
+                                    {`MCF 8059, Sohna Road, Near Lal Kothi,
+                                      Block F, Sanjay Colony, Ballabgarh,
+                                      Faridabad, Haryana 121005`}
+                                </Typography>
                             </Box>
                             <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                                <Phone sx={{ mr: 1 }} />
-                                <Typography>+91 931-931-9994</Typography>
+                                <Phone />
+                                <Typography>
+                                    <Button
+                                        component="a"
+                                        href="tel:9319319994"
+                                        sx={{
+                                            color: 'background.default',
+                                            '&:hover': {
+                                                color: 'background.blue',
+                                                backgroundColor: 'transparent',
+                                                fontWeight: 'bolder',
+                                            }
+                                        }}
+                                    >
+                                        +91 931-931-9994
+                                    </Button>
+                                </Typography>
                             </Box>
                             <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                                <Phone sx={{ mr: 1 }} />
-                                <Typography>+91 931-931-9998</Typography>
+                                <Phone />
+                                <Typography>
+                                    <Button
+                                        component="a"
+                                        href="tel:9319319998"
+                                        sx={{
+                                            color: 'background.default',
+                                            '&:hover': {
+                                                color: 'background.blue',
+                                                backgroundColor: 'transparent',
+                                                fontWeight: 'bolder',
+                                            }
+                                        }}
+                                    >
+                                        +91 931-931-9998
+                                    </Button>
+                                </Typography>
                             </Box>
                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                 <Email sx={{ mr: 1 }} />
@@ -56,9 +97,8 @@ const Footer = () => {
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <Typography variant="h6" gutterBottom>Opening Hours</Typography>
-                            <Typography>Mon-Fri: 8am - 8pm</Typography>
-                            <Typography>Sat: 9am - 6pm</Typography>
-                            <Typography>Sun: Emergency Only</Typography>
+                            <Typography>Mon-Sat: 8am - 8pm</Typography>
+                            <Typography>Sun: 3am - 3pm</Typography>
                         </Grid>
                     </Grid>
                 </Container>
