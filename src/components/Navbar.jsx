@@ -55,6 +55,21 @@ const Navbar = () => {
         setMobileOpen(!mobileOpen);
     };
 
+    const handleNavClick = (e) => {
+        console.log(e.target.innerText)
+        if (isMobile) {
+            setMobileOpen(false);
+        }
+
+        const componentSection = document.getElementById(e.target.innerText);
+        if (componentSection) {
+            componentSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     const drawer = (
         <Box sx={{ width: 250, p: 2 }}>
             <IconButton onClick={handleDrawerToggle} sx={{ mb: 2 }}>
@@ -70,9 +85,9 @@ const Navbar = () => {
                 >
                     9319319994
                 </Button>
-                <Button component={Link} to="/" color="inherit">Home</Button>
-                <Button component={Link} to="/services" color="inherit">Services</Button>
-                <Button component={Link} to="/about" color="inherit">About</Button>
+                <Button onClick={handleNavClick} color="inherit">Home</Button>
+                <Button onClick={handleNavClick} color="inherit">Services</Button>
+                <Button onClick={handleNavClick} color="inherit">About</Button>
                 <Button component={Link} to="/contact" color="inherit">Contact</Button>
             </Grid>
         </Box>
@@ -152,9 +167,9 @@ const Navbar = () => {
                             <>
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, flexGrow: 1, justifyContent: 'flex-end' }}>
                                     <Box sx={{ display: 'flex', gap: 3 }}>
-                                        <Button component={Link} to="/" color="inherit">Home</Button>
-                                        <Button component={Link} to="/services" color="inherit">Services</Button>
-                                        <Button component={Link} to="/about" color="inherit">About</Button>
+                                        <Button onClick={handleNavClick} color="inherit">Home</Button>
+                                        <Button onClick={handleNavClick} color="inherit">Services</Button>
+                                        <Button onClick={handleNavClick} color="inherit">About</Button>
                                         <Button component={Link} to="/contact" color="inherit">Contact</Button>
                                     </Box>
                                     <Button

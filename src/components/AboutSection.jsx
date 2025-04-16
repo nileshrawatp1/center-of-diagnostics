@@ -7,7 +7,7 @@ const AboutSection = () => {
 
   return (
     <Box
-      id="about"
+      id="ABOUT"
       sx={{
         py: 8,
         backgroundColor: 'grey.100',

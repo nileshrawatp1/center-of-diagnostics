@@ -32,7 +32,7 @@ const services = [
 const Services = () => {
     return (
         <>
-            <Box component="main" sx={{ flexGrow: 1 }}>
+            <Box component="main" id='HOME' sx={{ flexGrow: 1 }}>
                 {/* Hero Section */}
                 <Box sx={{
                     bgcolor: 'primary.main',
@@ -70,7 +70,7 @@ const Services = () => {
                 </Box>
 
                 {/* Services Section */}
-                <Container maxWidth="xl" sx={{ py: 8 }}>
+                <Container id='SERVICES' maxWidth="xl" sx={{ py: 8 }}>
                     <Typography variant="h3" component="h2" align="center" gutterBottom sx={{ fontWeight: 700 }}>
                         Our Services
                     </Typography>

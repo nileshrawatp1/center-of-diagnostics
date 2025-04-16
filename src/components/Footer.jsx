@@ -14,6 +14,17 @@ import {
     LocationOn,
 } from '@mui/icons-material';
 
+const handleNavClick = (e) => {
+    console.log(e.target.innerText)
+    const componentSection = document.getElementById(e.target.innerText);
+    if (componentSection) {
+        componentSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+};
+
 
 const Footer = () => {
     return (
@@ -87,11 +98,11 @@ const Footer = () => {
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <Typography variant="h6" gutterBottom>Quick Links</Typography>
-                            <Button component={Link} to="/" color="inherit">Home</Button>
+                            <Button onClick={handleNavClick} color="inherit">Home</Button>
                             <br />
-                            <Button component={Link} to="/services" color="inherit">Services</Button>
+                            <Button onClick={handleNavClick} color="inherit">Services</Button>
                             <br />
-                            <Button component={Link} to="/about" color="inherit">About</Button>
+                            <Button onClick={handleNavClick} color="inherit">About</Button>
                             <br />
                             <Button component={Link} to="/contact" color="inherit">Contact</Button>
                         </Grid>
